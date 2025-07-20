@@ -14,7 +14,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/v1/categories")
 @AllArgsConstructor
-@NoArgsConstructor
 public class CategoryController {
 
     private CategoryInter categoryInter;
@@ -33,13 +32,13 @@ public class CategoryController {
         return new ResponseEntity<>(categoryDto1,HttpStatus.OK);
     }
 
-    @GetMapping("/{categoryId")
+    @GetMapping("/{categoryId}")
     public ResponseEntity<CategoryDto> getOne(@PathVariable String categoryId){
         CategoryDto categoryDto = categoryInter.getOne(categoryId);
         return new ResponseEntity<>(categoryDto,HttpStatus.OK);
     }
 
-    @DeleteMapping("/{categoryId")
+    @DeleteMapping("/{categoryId}")
     public void delete(@PathVariable String categoryId){
         categoryInter.delete(categoryId);
     }

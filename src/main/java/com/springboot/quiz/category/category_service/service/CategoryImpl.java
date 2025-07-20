@@ -13,7 +13,7 @@ import java.util.UUID;
 
 @Service
 @AllArgsConstructor
-@NoArgsConstructor
+
 public class CategoryImpl implements CategoryInter{
 
     private CategoryRepo categoryRepo;
